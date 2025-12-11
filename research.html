@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emmanuel Tuyishime – Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="nav">
+      <div class="nav-left">
+        <div class="nav-logo">ET</div>
+        <div class="nav-title">
+          <span>Emmanuel Tuyishime</span>
+          <span>Cybersecurity & Remote Engineering</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="writing.html">Writing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="card-header">
+          <h2 class="card-title">Research Focus</h2>
+          <span class="card-pill">PhD · Cybersecurity & Remote Engineering</span>
+        </div>
+        <p>
+          My research explores how to secure <strong>remote monitoring and control systems</strong> built on IoT and IIoT technologies,
+          with emphasis on <strong>runtime anomaly detection</strong> and <strong>policy-enforced, identity-aware architectures</strong>.
+        </p>
+        <ul class="list">
+          <li><strong>IIoT/ICS testbeds for cybersecurity experimentation</strong> – design and evaluation of modular testbeds with MQTT, Node-RED, InfluxDB, and Grafana.</li>
+          <li><strong>Real-time MQTT-based intrusion detection</strong> – feature selection, model training, and deployment of ML-based IDS on edge devices using datasets such as MQTTset.</li>
+          <li><strong>Zero Trust for IoT/IIoT</strong> – identity-aware access control, mTLS, and policy enforcement for remote engineering applications.</li>
+          <li><strong>Educational remote labs</strong> – integrating secure remote access and monitoring into engineering education environments.</li>
+        </ul>
+
+        <div class="badge-row">
+          <span class="badge">Anomaly detection</span>
+          <span class="badge">Edge & cloud deployment</span>
+          <span class="badge">MQTTset</span>
+          <span class="badge">VICSORT & IIoT testbeds</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2 class="card-title">Current Themes</h2>
+          <span class="card-pill">Ongoing work</span>
+        </div>
+        <ul class="list">
+          <li>Zero Trust architectures for IoT/IIoT-based IDS.</li>
+          <li>Comparing edge vs. cloud deployment for ML-based intrusion detection.</li>
+          <li>Designing and curating experimental datasets that combine IIoT and ICS traffic.</li>
+          <li>Using remote labs to teach cybersecurity in realistic IIoT/ICS settings.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Emmanuel Tuyishime.
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
