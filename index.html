@@ -4,390 +4,7 @@
   <meta charset="UTF-8">
   <title>Emmanuel Tuyishime – Cybersecurity & Remote Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PhD researcher in cybersecurity and remote engineering applications, focusing on IIoT/ICS testbeds, MQTT anomaly detection, and Zero Trust architectures.">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-alt: #020617;
-      --card: #020617;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.08);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: #1f2937;
-      --radius-lg: 18px;
-      --radius-full: 999px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.8);
-      --shadow-card: 0 10px 35px rgba(15, 23, 42, 0.9);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 24px 16px 60px;
-    }
-
-    /* Top nav */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 4px 16px;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.75), transparent);
-      border-bottom: 1px solid rgba(15, 23, 42, 0.7);
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-logo {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #38bdf8 0, #0369a1 25%, #0f172a 65%, #020617 100%);
-      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      color: #e5f2ff;
-    }
-
-    .nav-title {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .nav-title span:first-child {
-      font-weight: 600;
-      font-size: 15px;
-    }
-
-    .nav-title span:last-child {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      padding: 6px 10px;
-      border-radius: var(--radius-full);
-      border: 1px solid transparent;
-    }
-
-    .nav-links a:hover {
-      color: var(--text);
-      border-color: rgba(148, 163, 184, 0.3);
-      background-color: rgba(15, 23, 42, 0.8);
-    }
-
-    /* Layout */
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    @media (max-width: 880px) {
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .nav-links {
-        display: none;
-      }
-    }
-
-    /* Hero */
-    .hero-card {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(94, 234, 212, 0.06), transparent 55%),
-                  linear-gradient(to bottom right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
-      border-radius: 24px;
-      padding: 24px 24px 20px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(15, 23, 42, 0.7);
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .hero-pill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
-    }
-
-    .hero-title {
-      font-size: 28px;
-      font-weight: 650;
-      margin: 4px 0 6px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-subtitle {
-      font-size: 15px;
-      color: var(--muted);
-      max-width: 35rem;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 14px 0 16px;
-      font-size: 11px;
-    }
-
-    .hero-tag {
-      padding: 5px 9px;
-      border-radius: var(--radius-full);
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(51, 65, 85, 0.9);
-      color: #cbd5f5;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .btn-primary,
-    .btn-ghost {
-      border-radius: var(--radius-full);
-      padding: 8px 16px;
-      font-size: 13px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, border-color 0.12s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(to right, #0ea5e9, #22c55e);
-      color: #0b1120;
-      font-weight: 600;
-      box-shadow: 0 14px 30px rgba(34, 197, 94, 0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(34, 197, 94, 0.45);
-      text-decoration: none;
-    }
-
-    .btn-ghost {
-      background: rgba(15, 23, 42, 0.8);
-      border-color: rgba(148, 163, 184, 0.5);
-      color: var(--text);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.95);
-      border-color: rgba(148, 163, 184, 0.9);
-      text-decoration: none;
-    }
-
-    .hero-corner {
-      position: absolute;
-      right: 18px;
-      bottom: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 6px;
-      font-size: 11px;
-      color: var(--muted);
-      text-align: right;
-    }
-
-    .hero-corner-badge {
-      padding: 4px 8px;
-      border-radius: var(--radius-full);
-      background: rgba(15, 23, 42, 0.92);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-    }
-
-    /* Cards */
-    .card {
-      background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.97), rgba(15, 23, 42, 1));
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-card);
-      margin-bottom: 18px;
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 10px;
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .card-pill {
-      font-size: 11px;
-      color: var(--muted);
-      padding: 3px 8px;
-      border-radius: var(--radius-full);
-      background-color: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(51, 65, 85, 0.9);
-    }
-
-    .card p {
-      font-size: 13px;
-      color: var(--muted);
-      margin: 4px 0 8px;
-    }
-
-    .list {
-      list-style: none;
-      margin: 6px 0 0;
-      padding: 0;
-      font-size: 13px;
-    }
-
-    .list li {
-      margin-bottom: 6px;
-      padding-left: 12px;
-      position: relative;
-      color: #e5e7eb;
-    }
-
-    .list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 12px;
-    }
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .badge {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: var(--radius-full);
-      background-color: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      color: #d1d5db;
-    }
-
-    /* Sidebar sections */
-    .mini-card {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.07), transparent 60%),
-                  linear-gradient(to bottom right, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 14px 14px 12px;
-      margin-bottom: 14px;
-      font-size: 13px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .mini-card h3 {
-      font-size: 13px;
-      margin: 0 0 6px;
-    }
-
-    .meta {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
-      font-size: 12px;
-    }
-
-    .contact-pill {
-      padding: 4px 8px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(51, 65, 85, 0.9);
-      background: rgba(15, 23, 42, 0.98);
-      color: #e5e7eb;
-    }
-
-    /* Section anchors */
-    section {
-      scroll-margin-top: 72px;
-    }
-
-    footer {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      font-size: 11px;
-      color: var(--muted);
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page">
@@ -401,19 +18,17 @@
         </div>
       </div>
       <nav class="nav-links">
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#writing">Writing</a>
-        <a href="#contact">Contact</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="writing.html">Writing</a>
       </nav>
     </header>
 
-    <!-- MAIN GRID -->
     <main class="grid">
-      <!-- LEFT COLUMN -->
+      <!-- LEFT -->
       <div>
-        <!-- HERO -->
         <section class="hero-card">
           <div class="hero-pill">
             <span class="hero-pill-dot"></span>
@@ -433,11 +48,11 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn-primary" href="#research">
+            <a class="btn-primary" href="research.html">
               View research focus →
             </a>
-            <a class="btn-ghost" href="#contact">
-              Get in touch
+            <a class="btn-ghost" href="projects.html">
+              Explore projects
             </a>
           </div>
 
@@ -445,164 +60,46 @@
             <div class="hero-corner-badge">
               Current thesis: <strong>Addressing Cybersecurity Challenges in Remote Engineering Applications</strong>
             </div>
-            <span>Exploring IIoT/ICS testbeds, ML IDS, and Zero Trust architectures.</span>
+            <span>Experimental IIoT/ICS testbeds, ML IDS, and Zero Trust architectures.</span>
           </div>
         </section>
 
-        <!-- RESEARCH -->
-        <section id="research" class="card">
+        <section class="card">
           <div class="card-header">
-            <h2 class="card-title">Research Focus</h2>
-            <span class="card-pill">PhD · Cybersecurity & Remote Engineering</span>
+            <h2 class="card-title">At a glance</h2>
+            <span class="card-pill">Short overview</span>
           </div>
           <p>
-            My research explores how to secure <strong>remote monitoring and control systems</strong> built on IoT and IIoT technologies,
-            with emphasis on <strong>runtime anomaly detection</strong> and <strong>policy-enforced, identity-aware architectures</strong>.
+            I work on securing <strong>remote monitoring and control systems</strong> built on IoT and IIoT technologies, 
+            focusing on experimental testbeds, <strong>ML-based intrusion detection</strong>, and <strong>Zero Trust</strong> architectures.
           </p>
           <ul class="list">
-            <li><strong>IIoT/ICS testbeds for cybersecurity experimentation</strong> – design and evaluation of modular testbeds with MQTT, Node-RED, InfluxDB, and Grafana.</li>
-            <li><strong>Real-time MQTT-based intrusion detection</strong> – feature selection, model training, and deployment of ML-based IDS on edge devices.</li>
-            <li><strong>Zero Trust for IoT/IIoT</strong> – identity-aware access control, mTLS, and policy enforcement for remote engineering applications.</li>
-            <li><strong>Educational remote labs</strong> – integrating secure remote access and monitoring into engineering education environments.</li>
+            <li>Design and operation of an IIoT MQTT testbed (ESP32, Raspberry Pi, Node-RED, InfluxDB, Grafana).</li>
+            <li>Real-time anomaly detection for MQTT traffic using ML models deployed on edge devices.</li>
+            <li>Application of identity-aware and policy-enforced architectures to remote labs and ICS environments.</li>
           </ul>
-
-          <div class="badge-row">
-            <span class="badge">Anomaly detection</span>
-            <span class="badge">Edge & cloud deployment</span>
-            <span class="badge">MQTTset-based experimentation</span>
-            <span class="badge">VICSORT & IIoT testbeds</span>
-          </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects" class="card">
-          <div class="card-header">
-            <h2 class="card-title">Selected Projects</h2>
-            <span class="card-pill">Implementation & experimentation</span>
-          </div>
-          <ul class="list">
-            <li>
-              <strong>IIoT MQTT Security Testbed</strong> – ESP32 sensors, Raspberry Pi broker, Node-RED orchestration, InfluxDB storage, Grafana dashboards,
-              and real-time ML-based anomaly detection for MQTT traffic.
-            </li>
-            <li>
-              <strong>Experimental Research on Cybersecurity in Remote Control Systems</strong> – integrating IDS, attack simulation, and policy-based enforcement
-              into remote engineering scenarios.
-            </li>
-            <li>
-              <strong>VICSORT-based ICS security lab</strong> – use of an ICS testbed for teaching and research on industrial control system security and attack experimentation.
-            </li>
-            <li>
-              <strong>Zero Trust for Remote Labs</strong> – applying Zero Trust principles to secure online laboratory access and remote engineering platforms.
-            </li>
-          </ul>
-          <p style="margin-top: 6px;">
-            I am particularly interested in bridging the gap between <strong>research prototypes</strong> and <strong>deployable architectures</strong> that can be adopted in both
-            educational and industrial contexts.
-          </p>
-        </section>
-
-        <!-- PUBLICATIONS -->
-        <section id="publications" class="card">
-          <div class="card-header">
-            <h2 class="card-title">Publications & Academic Output</h2>
-            <span class="card-pill">Academic work (selection)</span>
-          </div>
-          <p>
-            A non-exhaustive selection of works (update with full references and links as needed):
-          </p>
-          <ul class="list">
-            <li>
-              <strong>Online Laboratory Access Control with a Zero Trust Approach</strong> – exploring Zero Trust for secure access to remote labs.
-            </li>
-            <li>
-              <strong>SIEM-based Threat Monitoring in Cloud Environments</strong> – proactive detection using security event management.
-            </li>
-            <li>
-              <strong>Resource-Efficient Traffic Classification for MQTT-IoT Network-based Attacks</strong> – ML-based classification for MQTT threats (work in progress / under submission).
-            </li>
-          </ul>
-          <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">
-            A complete publication list and preprints will be added here. If you are interested in any of these works, feel free to contact me.
-          </p>
-        </section>
-
-        <!-- WRITING -->
-        <section id="writing" class="card">
-          <div class="card-header">
-            <h2 class="card-title">Books & Writing</h2>
-            <span class="card-pill">Beyond research</span>
-          </div>
-          <p>
-            In parallel with my technical research, I also work on long-form writing projects aimed at both technical and general audiences.
-          </p>
-          <ul class="list">
-            <li>
-              <strong>Words That Shape Us</strong> – an e-book built around quotes, stories, and reflections for personal growth, based on years of journaling and reading.
-            </li>
-            <li>
-              <strong>Real-Time Anomaly Detection in MQTT Networks: From Data to Deployment</strong> – a practical guide covering dataset preparation, feature selection,
-              model training, and edge deployment for MQTT-based intrusion detection.
-            </li>
-            <li>
-              <strong>Case-based narratives on education and resilience</strong> – non-fiction work grounded in real stories of academic transformation and perseverance.
-            </li>
-          </ul>
-          <p style="font-size: 12px; color: var(--muted); margin-top: 8px;">
-            I see writing as a way to connect technical work with broader questions of resilience, learning, and how technology shapes people’s lives.
-          </p>
         </section>
       </div>
 
-      <!-- RIGHT COLUMN (SIDEBAR) -->
+      <!-- RIGHT -->
       <aside>
-        <!-- SHORT BIO -->
         <section class="mini-card">
-          <h3>Short Bio</h3>
-          <p>
-            I am a PhD candidate in cybersecurity with a focus on <strong>remote engineering applications</strong>,
-            <strong>Industrial IoT</strong>, and <strong>ICS security</strong>. My work combines experimental testbeds,
-            ML-based intrusion detection, and secure remote access architectures.
-          </p>
-          <p class="meta">
-            Previously involved in international academic mobility and collaboration, including work on IoT/IIoT testbeds and
-            remote lab infrastructures.
-          </p>
-        </section>
-
-        <!-- CURRENT THEMES -->
-        <section class="mini-card">
-          <h3>Current Research Themes</h3>
+          <h3>Quick links</h3>
           <ul class="list">
-            <li>Zero Trust architectures for IoT/IIoT-based IDS.</li>
-            <li>Edge vs cloud deployment of ML-based IDS.</li>
-            <li>Experimental datasets for MQTT and ICS security.</li>
-            <li>Educational use of remote labs for cybersecurity.</li>
+            <li><a href="research.html">Research focus</a></li>
+            <li><a href="projects.html">Experimental testbeds & projects</a></li>
+            <li><a href="publications.html">Publications & academic work</a></li>
+            <li><a href="writing.html">Books & other writing</a></li>
           </ul>
         </section>
 
-        <!-- TEACHING / SUPERVISION -->
         <section class="mini-card">
-          <h3>Teaching & Supervision (selected)</h3>
-          <p>
-            I contribute to activities around remote labs and cybersecurity education, including:
-          </p>
-          <ul class="list">
-            <li>Supporting students in hands-on IoT/IIoT security experiments.</li>
-            <li>Using testbeds to demonstrate real attacks and countermeasures.</li>
-          </ul>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="mini-card">
-          <h3>Contact & Links</h3>
-          <p>If you are interested in collaboration, supervision, or simply discussing ideas, feel free to reach out.</p>
+          <h3>Contact</h3>
+          <p>If you’re interested in collaboration or supervision, reach out by email or via professional networks.</p>
           <div class="contact-links">
             <a class="contact-pill" href="mailto:tuyishime.emmanuel@proton.me">Email</a>
             <a class="contact-pill" href="https://github.com/https://github.com/emmanuel-tuyishime/" target="_blank" rel="noopener">GitHub</a>
             <a class="contact-pill" href="https://www.linkedin.com/in/www.linkedin.com/in/emmanuel-t-19993b163" target="_blank" rel="noopener">LinkedIn</a>
-            <!-- Optional CV link -->
-            <!-- <a class="contact-pill" href="CV_Emmanuel_Tuyishime.pdf" target="_blank" rel="noopener">CV (PDF)</a> -->
           </div>
         </section>
       </aside>
@@ -614,7 +111,6 @@
   </div>
 
   <script>
-    // Simple current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
