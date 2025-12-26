@@ -435,10 +435,10 @@ footer {
 
 .hero-identity {
   display: flex;
-  align-items: center;      /* vertical centering */
-  justify-content: center;  /* horizontal centering */
-  gap: 16px;                /* space between photo and name */
-  flex-wrap: wrap;          /* safe on small screens */
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* horizontal centering */
+  justify-content: center;  /* vertical centering */
+  gap: 12px;                /* space between photo and name */
   text-align: center;
 }
 
