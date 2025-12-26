@@ -394,3 +394,21 @@ footer {
   color: var(--muted);
   text-align: center;
 }
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+}
+/* Profile */
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+}
+
