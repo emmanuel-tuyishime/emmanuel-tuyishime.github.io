@@ -132,13 +132,13 @@ a:hover {
 }
 
 @media (max-width: 880px) {
-  .grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
   .nav-links {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
 }
+
 
 /* HERO */
 .hero-card {
