@@ -39,7 +39,7 @@ a:hover {
   padding: 24px 16px 60px;
 }
 
-/* ================= NAV ================= */
+/*  NAV */
 
 .nav {
   display: flex;
@@ -133,7 +133,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* ================= LAYOUT ================= */
+/* DESKTOP LAYOUT */
 
 .grid {
   display: grid;
@@ -142,7 +142,7 @@ a:hover {
   margin-top: 24px;
 }
 
-/* ================= MOBILE LAYOUT FIX ================= */
+/*  MOBILE LAYOUT  */
 
 @media (max-width: 880px) {
 
@@ -190,7 +190,7 @@ a:hover {
   }
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero-card {
   background:
@@ -228,7 +228,7 @@ a:hover {
   max-width: 35rem;
 }
 
-/* ================= SIDEBAR / PROFILE ================= */
+/*  SIDEBAR / PROFILE */
 
 .profile-photo {
   width: 150px;
@@ -247,7 +247,7 @@ a:hover {
   text-align: center;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER = */
 
 footer {
   margin-top: 24px;
