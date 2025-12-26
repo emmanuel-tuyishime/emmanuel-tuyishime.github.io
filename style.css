@@ -433,3 +433,12 @@ footer {
   );
 }
 
+.hero-identity {
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
+  gap: 16px;                /* space between photo and name */
+  flex-wrap: wrap;          /* safe on small screens */
+  text-align: center;
+}
+
