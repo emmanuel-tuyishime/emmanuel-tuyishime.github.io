@@ -397,12 +397,14 @@ footer {
 
 /* Profile */
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(148, 163, 184, 0.6);
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+  align-items: center;
+  justify-content: center;
 }
 .nav-logo {
   width: 32px;
