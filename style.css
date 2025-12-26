@@ -132,10 +132,8 @@ a:hover {
 }
 
 @media (max-width: 880px) {
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
