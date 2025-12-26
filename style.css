@@ -131,12 +131,36 @@ a:hover {
   margin-top: 24px;
 }
 
-@media (max-width: 880px) {
-  .grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
 }
 
+@media (max-width: 880px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 10px;
+    border-radius: 12px;
+    position: absolute;
+    top: 56px;
+    right: 16px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
 
 /* HERO */
 .hero-card {
