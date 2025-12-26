@@ -20,6 +20,7 @@
         </div>
       </div>
       <nav class="nav-links">
+        <button class="nav-toggle" aria-label="Menu">☰</button>
         <a href="index.html">Home</a>
         <a href="publications.html">Publications</a>
         <a class="active" href="education.html">Education & Qualifications</a>
@@ -95,7 +96,15 @@
     </footer>
 
   </div>
+   <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
 
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+  });
+</script>
+  
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
