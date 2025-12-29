@@ -233,7 +233,7 @@ a:hover {
   color: var(--muted);
   max-width: 35rem;
 }
-  .hero-tags {
+/*  .hero-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -254,7 +254,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 8px;
-}
+} */
 
 /*  SIDEBAR / PROFILE */
 
