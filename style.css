@@ -233,35 +233,6 @@ a:hover {
   color: var(--muted);
   max-width: 35rem;
 }
-/* .hero-pill-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #22c55e;
-  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
-  
-  .hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 14px 0 16px;
-  font-size: 11px;
-}
-
-.hero-tag {
-  padding: 5px 9px;
-  border-radius: var(--radius-full);
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(51, 65, 85, 0.9);
-  color: #cbd5f5;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
-} */
 
 /*  SIDEBAR / PROFILE */
 
