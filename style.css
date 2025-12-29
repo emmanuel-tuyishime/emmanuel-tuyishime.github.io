@@ -233,7 +233,14 @@ a:hover {
   color: var(--muted);
   max-width: 35rem;
 }
-/*  .hero-tags {
+/* .hero-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+  
+  .hero-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
