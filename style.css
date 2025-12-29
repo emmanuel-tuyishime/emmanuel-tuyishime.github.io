@@ -234,6 +234,22 @@ a:hover {
   max-width: 35rem;
 }
 
+ .hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 16px;
+  font-size: 11px;
+}
+
+.hero-tag {
+  padding: 5px 9px;
+  border-radius: var(--radius-full);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  color: #cbd5f5;
+}
+
 /*  SIDEBAR / PROFILE */
 
 .profile-photo {
