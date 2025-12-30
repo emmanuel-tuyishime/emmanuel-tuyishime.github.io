@@ -251,6 +251,13 @@ a:hover {
   text-align: center;
 }
 
+.contact-links {
+  display: flex;
+  flex-direction: column;   
+  gap: 8px;                 
+  align-items: flex-start;  
+}
+
 /* FOOTER = */
 
 footer {
